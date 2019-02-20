@@ -22,7 +22,7 @@ It might also work with other combination of versions.
 
 This are the metrics created for each php-fpm pool:
 
-[![N|Solid](https://github.com/vigrai/zabbix-template-php-fpm/img/macros.png)]
+[![N|Solid](https://github.com/vigrai/zabbix-template-php-fpm/blob/master/img/metrics.png)]
 
 # Requirements
 
@@ -128,4 +128,4 @@ Even though this template is made with automation in mind, there's still some ma
     }
     ```
 6. If the script is returning the pools, you are ready to go. Import the zabbix-template-php-fpm.xml file in your Zabbix GUI and make sure that the macros are correctly setup, this are the values by default:
-[![N|Solid](https://github.com/vigrai/zabbix-template-php-fpm/img/macros.png)]
+[![N|Solid](https://github.com/vigrai/zabbix-template-php-fpm/blob/master/img/macros.png)]
