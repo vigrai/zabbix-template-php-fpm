@@ -59,6 +59,7 @@ Even though this template is made with automation in mind, there's still some ma
      Example configuration file for pool called *nms* (/etc/php/7.2/fpm/pool.d/nms.conf):
 
      ```[nms]```
+     
      ```pm.status_path = /fpm-status_nms```
 
      [x] Php-status should be accessible for each pool. This is an example configuration file for nginx:
