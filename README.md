@@ -2,7 +2,7 @@
 
 This is a template for monitoring php-fpm and it's pools with [Zabbix](www.zabbix.com).
 
-What's special about this template, is that it *automatically* detects (using LLD) the running php-fpm pools and creates items for measuring metrics from each pool.
+What's special about this template, is that it *automatically* detects (using LLD) the running php-fpm pools and creates items for measuring metrics from each pool. It uses Http Agent type check in zabbix in order to parse the php status information into useful metrics.
 
 So, if you are running a server with multiple php-fpm pools, this may be a better alternative for monitoring php than other templates available.
 
@@ -59,7 +59,7 @@ Even though this template is made with automation in mind, there's still some ma
      Example configuration file for pool called *nms* (/etc/php/7.2/fpm/pool.d/nms.conf):
 
      ```[nms]```
-     
+
      ```pm.status_path = /fpm-status_nms```
 
      [x] Php-status should be accessible for each pool. This is an example configuration file for nginx:
@@ -76,6 +76,8 @@ Even though this template is made with automation in mind, there's still some ma
 
         keepalive_timeout 0;
 
+        # Allow the ip of the Zabbix Proxy/Server which is going to perform the polling.
+        # In this case, I am installing on the same host, so 127.0.0.1.
         allow 127.0.0.1;
         deny all;
 
